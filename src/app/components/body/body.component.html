@@ -1,0 +1,32 @@
+<br>
+<div class="container">
+
+    <button class="btn btn-info" type="button" [routerLink]="['/escuelas/form']" > Nueva Escuela</button>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">nombre</th>
+        <th scope="col">cantAlum</th>
+        <th scope="col">clasificacion</th>
+        <th scope="col">recurso fiscal</th>
+        <th scope="col">licenciada</th>
+        <th scope="col">fecha de registro</th>
+        <th scope="col">facultad</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of arrEscuelas">
+        <th scope="row">{{item.id}}</th>
+        <td>{{item.nombre}}</td>
+        <td>{{item.cantAlumnos}}</td>
+        <td>{{item.clasificacion}}</td>
+        <td>{{item.recurso_Fiscal}}</td>
+        <td>{{item.licenciada}}</td>
+        <td>{{item.fechaRegistro}}</td>
+        <td>{{item.facultad.descripcion}}</td>
+      </tr>
+      
+    </tbody>
+  </table>
+</div>

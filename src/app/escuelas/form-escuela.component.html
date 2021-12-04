@@ -1,0 +1,66 @@
+<div class="container">
+
+    <div class="card-body">
+        <h5 class="card-title">{{titulo}}</h5>
+        <form>
+            <div class="form-group row">
+                <label for="nombres" class="col-form-label col-sm-2">NOMBRE</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" name="nombres" placeholder="string" [(ngModel)]="escuela.nombre" >
+                </div>                
+            </div>
+            <br>
+            <div class="form-group row">
+                <label for="CantAlumnos" class="col-form-label col-sm-2">CantAlumnos</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" name="CantAlumnos" placeholder="integer" [(ngModel)]="escuela.CantAlumnos">
+                </div>                
+            </div>
+            <br>
+            <div class="form-group row">
+                <label for="Recurso_fiscal" class="col-form-label col-sm-2">Recurso_fiscal</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" name="Recurso_fiscal" placeholder="integer" [(ngModel)]="escuela.Recurso_fiscal">
+                </div>                
+            </div>
+            <br>
+            <div class="form-group row">
+                <label for="Licenciada" class="col-form-label col-sm-2">Licenciada</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" name="Licenciada" placeholder="boolean" [(ngModel)]="escuela.Licenciada">
+                </div>                
+            </div>
+            <br>
+            <div class="form-group row">
+                <label for="Clasificacion" class="col-form-label col-sm-2">Clasificacion</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" name="Clasificacion" placeholder="integer" [(ngModel)]="escuela.Clasificacion">
+                </div>                
+            </div>
+            <br>
+            <div class="form-group row">
+                <label for="fechaRegistro" class="col-form-label col-sm-2">fechaRegistro</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" name="fechaRegistro" placeholder="date" [(ngModel)]="escuela.fechaRegistro">
+                </div>                
+            </div>
+            <br>
+            <div class="form-group row">
+                <label for="facultad" class="col-form-label col-sm-2">facultad</label>
+                <div class="col-sm-6">
+                    <!--
+                    <input type="text" class="form-control" name="facultad" placeholder="integer" [(ngModel)]="escuela.facultad">
+                    -->
+                    <select class="form-control" >
+                        <option [(ngModel)]="escuela.facultad" 
+                                value="facultad.id"  
+                                text="facultad.descripcion"  ></option>                     
+                      </select>
+                </div>                
+            </div>
+            <br>
+            <button class="btn btn-success" role="button" (click)='create()'> REGISTRAR</button>
+        </form>
+    </div>
+
+</div>
